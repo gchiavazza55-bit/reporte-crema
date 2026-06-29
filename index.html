@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reporte Crema — Primer Premio</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f0f2f5; padding: 24px; color: #2c3e50; font-size: 14px; }
+.wrap { max-width: 1100px; margin: 0 auto; }
+header { margin-bottom: 22px; }
+header h1 { font-size: 1.5em; color: #1a252f; }
+header p { color: #7f8c8d; font-size: 0.88em; margin-top: 4px; }
+
+/* KPI cards */
+.kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-bottom: 20px; }
+.kpi { background: #fff; border-radius: 10px; padding: 16px 18px; box-shadow: 0 1px 6px rgba(0,0,0,.07); }
+.kpi .lbl { font-size: .68em; text-transform: uppercase; letter-spacing: .5px; color: #95a5a6; margin-bottom: 5px; }
+.kpi .val { font-size: 1.4em; font-weight: 700; color: #2c3e50; line-height: 1.2; }
+.kpi .sub { font-size: .72em; color: #aab; margin-top: 4px; line-height: 1.6; }
+
+/* Sections */
+.box { background: #fff; border-radius: 10px; padding: 20px 22px; box-shadow: 0 1px 6px rgba(0,0,0,.07); margin-bottom: 16px; }
+.box h2 { font-size: .95em; color: #34495e; border-bottom: 2px solid #ecf0f1; padding-bottom: 9px; margin-bottom: 14px; letter-spacing: .2px; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; font-size: .88em; }
+th { background: #f4f6f9; padding: 8px 11px; text-align: left; color: #555; font-weight: 600; font-size: .82em; white-space: nowrap; }
+td { padding: 7px 11px; border-bottom: 1px solid #f0f0f0; vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+tr.total td { font-weight: 700; background: #f8f9fa; }
+tr.highlight td { background: #fffbf0; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.cen { text-align: center; }
+
+/* Tags / badges */
+.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: .75em; font-weight: 700; }
+.leche { background: #eaf4fb; color: #2980b9; }
+.suero { background: #eafaf1; color: #219a52; }
+.badge { display: inline-block; padding: 2px 10px; border-radius: 20px; color: #fff; font-weight: 700; font-size: .82em; }
+.rank { display: inline-block; width: 22px; height: 22px; border-radius: 50%; background: #e0e0e0; color: #555; font-size: .78em; font-weight: 700; text-align: center; line-height: 22px; }
+.rank.gold { background: #f1c40f; color: #7d6608; }
+.rank.silver { background: #bdc3c7; color: #555; }
+.rank.bronze { background: #ca8a5a; color: #fff; }
+.delta { font-size: .8em; margin-left: 6px; font-weight: 600; }
+
+/* Two-column layout */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+footer { text-align: center; color: #bdc3c7; font-size: .76em; margin-top: 24px; }
+@media(max-width:700px) { .kpis { grid-template-columns: repeat(2,1fr); } .two-col { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🐄 Reporte de Crema — Primer Premio</h1>
+    <p>Última semana: <strong>22/06/2026</strong> &nbsp;·&nbsp; Generado el 29/06/2026 20:19</p>
+  </header>
+  
+    <div class="kpis">
+      <div class="kpi">
+        <div class="lbl">Grasa disponible (neto fasón)</div>
+        <div class="val">94.591 kg<span class="delta" style="color:#e74c3c">-28.9%</span></div>
+        <div class="sub">Total ingresada: 114.530 kg<br>Retención fasón: 19.940 kg</div>
+      </div>
+      <div class="kpi">
+        <div class="lbl">Precio pond. total</div>
+        <div class="val">$ 6.287<span class="delta" style="color:#27ae60">-1.0%</span></div>
+        <div class="sub">por kg de grasa</div>
+      </div>
+      <div class="kpi">
+        <div class="lbl">Grasa necesaria — sem. 29/06</div>
+        <div class="val">104.920 kg</div>
+        <div class="sub">según ventas proyectadas de la próxima semana</div>
+      </div>
+      <div class="kpi">
+        <div class="lbl">% Rinde Manteca</div>
+        <div class="val">18.0%</div>
+        <div class="sub">rendimiento de la semana</div>
+      </div>
+      <div class="kpi">
+        <div class="lbl">Kg G Agregados (Manteca)</div>
+        <div class="val">— kg</div>
+        <div class="sub">% G agregado: —</div>
+      </div>
+      <div class="kpi">
+        <div class="lbl">Proveedor más caro</div>
+        <div class="val" style="font-size:1em;line-height:1.3">L3N S.A. - Adecoagro</div>
+        <div class="sub">$ 7.000 / kg grasa</div>
+      </div>
+    </div>
+  
+    <div class="box">
+      <h2>🟢 Grasa Ingresada — Real vs Proyectado (por semana)</h2>
+      <table>
+        <tr>
+          <th>Semana</th>
+          <th class="num">Kg Grasa Total</th>
+          <th class="num">Kg Disponible<br><small style="font-weight:normal">(neto fasón)</small></th>
+          <th class="num">Retención Fasón</th>
+          <th class="num">Leche</th>
+          <th class="num">Suero</th>
+          <th class="num">Kg Proyectado</th>
+          <th class="num">Diferencia</th>
+          <th class="cen">% Cumpl.</th>
+        </tr>
+        
+        <tr class="">
+          <td>Sem. 01/06</td>
+          <td class="num">113.246 kg</td>
+          <td class="num">103.198 kg</td>
+          <td class="num" style="color:#e74c3c">10.049 kg</td>
+          <td class="num"><span class="tag leche">97.085 kg</span></td>
+          <td class="num"><span class="tag suero">6.113 kg</span></td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+        </tr>
+        <tr class="">
+          <td>Sem. 08/06</td>
+          <td class="num">153.149 kg</td>
+          <td class="num">136.760 kg</td>
+          <td class="num" style="color:#e74c3c">16.388 kg</td>
+          <td class="num"><span class="tag leche">128.313 kg</span></td>
+          <td class="num"><span class="tag suero">8.448 kg</span></td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+        </tr>
+        <tr class="">
+          <td>Sem. 15/06</td>
+          <td class="num">149.794 kg</td>
+          <td class="num">133.005 kg</td>
+          <td class="num" style="color:#e74c3c">16.789 kg</td>
+          <td class="num"><span class="tag leche">123.725 kg</span></td>
+          <td class="num"><span class="tag suero">9.280 kg</span></td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+        </tr>
+        <tr class="highlight">
+          <td>Sem. 22/06</td>
+          <td class="num">114.530 kg</td>
+          <td class="num">94.591 kg</td>
+          <td class="num" style="color:#e74c3c">19.940 kg</td>
+          <td class="num"><span class="tag leche">84.579 kg</span></td>
+          <td class="num"><span class="tag suero">10.012 kg</span></td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+        </tr>
+      </table>
+    </div>
+  
+  
+    <div class="box">
+      <h2>📦 Ventas Real vs Proyectado (por semana y producto)</h2>
+      <table>
+        <tr>
+          <th>Semana</th><th>Producto</th>
+          <th class="num">Kg Real</th>
+          <th class="num">Kg Proyectado</th>
+          <th class="cen">% Cumpl.</th>
+          <th class="num">Kg Grasa Requerida (real)</th>
+        </tr>
+        <tr><td rowspan="3" style="border-right:1px solid #eee">Sem. 01/06</td>
+                  <td>Manteca</td>
+                  <td class="num">156.418 kg</td>
+                  <td class="num">0 kg</td>
+                  <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+                  <td class="num">129.133 kg</td>
+                </tr><tr>
+                  <td>Untables</td>
+                  <td class="num">4.222 kg</td>
+                  <td class="num">0 kg</td>
+                  <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+                  <td class="num">2.745 kg</td>
+                </tr><tr>
+                  <td>Crema Pasteurizada</td>
+                  <td class="num">32.788 kg</td>
+                  <td class="num">0 kg</td>
+                  <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+                  <td class="num">12.787 kg</td>
+                </tr><tr><td rowspan="3" style="border-right:1px solid #eee">Sem. 08/06</td>
+                  <td>Manteca</td>
+                  <td class="num">119.444 kg</td>
+                  <td class="num">0 kg</td>
+                  <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+                  <td class="num">89.952 kg</td>
+                </tr><tr>
+                  <td>Untables</td>
+                  <td class="num">3.914 kg</td>
+                  <td class="num">0 kg</td>
+                  <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+                  <td class="num">2.544 kg</td>
+                </tr><tr>
+                  <td>Crema Pasteurizada</td>
+                  <td class="num">27.897 kg</td>
+                  <td class="num">0 kg</td>
+                  <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+                  <td class="num">10.880 kg</td>
+                </tr><tr><td rowspan="3" style="border-right:1px solid #eee">Sem. 15/06</td>
+                  <td>Manteca</td>
+                  <td class="num">94.287 kg</td>
+                  <td class="num">0 kg</td>
+                  <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+                  <td class="num">73.912 kg</td>
+                </tr><tr>
+                  <td>Untables</td>
+                  <td class="num">3.141 kg</td>
+                  <td class="num">0 kg</td>
+                  <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+                  <td class="num">2.042 kg</td>
+                </tr><tr>
+                  <td>Crema Pasteurizada</td>
+                  <td class="num">22.073 kg</td>
+                  <td class="num">0 kg</td>
+                  <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+                  <td class="num">8.608 kg</td>
+                </tr><tr><td rowspan="3" style="border-right:1px solid #eee">Sem. 22/06</td>
+                  <td>Manteca</td>
+                  <td class="num">187.000 kg</td>
+                  <td class="num">0 kg</td>
+                  <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+                  <td class="num">158.475 kg</td>
+                </tr><tr>
+                  <td>Untables</td>
+                  <td class="num">6.130 kg</td>
+                  <td class="num">0 kg</td>
+                  <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+                  <td class="num">3.984 kg</td>
+                </tr><tr>
+                  <td>Crema Pasteurizada</td>
+                  <td class="num">30.250 kg</td>
+                  <td class="num">0 kg</td>
+                  <td class="cen"><span class="badge" style="background:#95a5a6">—</span></td>
+                  <td class="num">11.798 kg</td>
+                </tr>
+      </table>
+    </div>
+  <div class="two-col">
+    
+    <div class="box">
+      <h2>🏆 Top 5 Proveedores por Kg Grasa — Sem. 22/06/2026</h2>
+      <table>
+        <tr><th>#</th><th>Proveedor</th><th class="num">Kg Grasa</th><th class="num">Kg Crema</th><th class="num">Precio ($/kg G)</th></tr>
+        
+        <tr>
+          <td><span class="rank gold">1</span></td>
+          <td>PEREZ JESUS ALBERTO</td>
+          <td class="num">10.513 kg</td>
+          <td class="num">20.049 kg</td>
+          <td class="num">$ 6.700</td>
+        </tr>
+        <tr>
+          <td><span class="rank silver">2</span></td>
+          <td>L3N S.A. - Adecoagro</td>
+          <td class="num">9.945 kg</td>
+          <td class="num">24.340 kg</td>
+          <td class="num">$ 7.000</td>
+        </tr>
+        <tr>
+          <td><span class="rank bronze">3</span></td>
+          <td>LACTEOS TONUTTI S.R.L.</td>
+          <td class="num">5.393 kg</td>
+          <td class="num">13.560 kg</td>
+          <td class="num">$ 6.250</td>
+        </tr>
+        <tr>
+          <td><span class="rank ">4</span></td>
+          <td>DON ALBERTO S.R.L.</td>
+          <td class="num">4.992 kg</td>
+          <td class="num">11.653 kg</td>
+          <td class="num">$ 6.200</td>
+        </tr>
+        <tr>
+          <td><span class="rank ">5</span></td>
+          <td>LACTEOS REPUBLICA DE ENTRE RIO</td>
+          <td class="num">4.020 kg</td>
+          <td class="num">9.897 kg</td>
+          <td class="num">$ 6.121</td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="box">
+      <h2>⚙️ Rinde y Grasa Agregada (Manteca)</h2>
+      <table>
+        <tr>
+          <th>Semana</th>
+          <th class="num">Kg G Utilizado<br><small style="font-weight:normal">(agregado)</small></th>
+          <th class="num">% G Agregado</th>
+          <th class="num">% Rinde Manteca</th>
+        </tr>
+        
+        <tr class="">
+          <td>Sem. 01/06</td>
+          <td class="num">2.638 kg</td>
+          <td class="num">2.56%</td>
+          <td class="num">18.11%</td>
+        </tr>
+        <tr class="">
+          <td>Sem. 08/06</td>
+          <td class="num">13.308 kg</td>
+          <td class="num">9.73%</td>
+          <td class="num">21.01%</td>
+        </tr>
+        <tr class="">
+          <td>Sem. 15/06</td>
+          <td class="num">9.312 kg</td>
+          <td class="num">7.00%</td>
+          <td class="num">19.22%</td>
+        </tr>
+        <tr class="highlight">
+          <td>Sem. 22/06</td>
+          <td class="num">— kg</td>
+          <td class="num">—</td>
+          <td class="num">18.00%</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <footer>Primer Premio · Reporte generado automáticamente por Claude</footer>
+</div>
+</body>
+</html>
