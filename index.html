@@ -12,7 +12,7 @@ header h1 { font-size: 1.5em; color: #1a252f; }
 header p { color: #7f8c8d; font-size: 0.88em; margin-top: 4px; }
 
 /* KPI cards */
-.kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-bottom: 20px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); gap: 14px; margin-bottom: 20px; }
 .kpi { background: #fff; border-radius: 10px; padding: 16px 18px; box-shadow: 0 1px 6px rgba(0,0,0,.07); }
 .kpi .lbl { font-size: .68em; text-transform: uppercase; letter-spacing: .5px; color: #95a5a6; margin-bottom: 5px; }
 .kpi .val { font-size: 1.4em; font-weight: 700; color: #2c3e50; line-height: 1.2; }
@@ -54,7 +54,7 @@ footer { text-align: center; color: #bdc3c7; font-size: .76em; margin-top: 24px;
 <div class="wrap">
   <header>
     <h1>🐄 Reporte de Crema — Primer Premio</h1>
-    <p>Última semana: <strong>22/06/2026</strong> &nbsp;·&nbsp; Generado el 30/06/2026 08:31</p>
+    <p>Última semana: <strong>22/06/2026</strong> &nbsp;·&nbsp; Generado el 30/06/2026 08:48</p>
   </header>
   
     <div class="kpis">
@@ -69,9 +69,14 @@ footer { text-align: center; color: #bdc3c7; font-size: .76em; margin-top: 24px;
         <div class="sub">por kg de grasa</div>
       </div>
       <div class="kpi">
+        <div class="lbl">Grasa proyectada a ingresar — sem. 29/06</div>
+        <div class="val">95.622 kg</div>
+        <div class="sub">según proyección de compras de esta semana</div>
+      </div>
+      <div class="kpi">
         <div class="lbl">Grasa necesaria — sem. 29/06</div>
         <div class="val">104.920 kg</div>
-        <div class="sub">según ventas proyectadas de la próxima semana</div>
+        <div class="sub">según ventas proyectadas de esta semana</div>
       </div>
       <div class="kpi">
         <div class="lbl">% Rinde Manteca</div>
